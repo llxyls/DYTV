@@ -13,7 +13,7 @@ class MainViewController: UITabBarController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addChildVc(storyboardName: "Home", title: "首页", imageName: "btn_home_normal", selImageName: "btn_column_selected")
+        addChildVc(storyboardName: "Home", title: "首页", imageName: "btn_home_normal", selImageName: "btn_home_selected")
         addChildVc(storyboardName: "Follow", title: "关注", imageName: "btn_live_normal", selImageName: "btn_live_selected")
         addChildVc(storyboardName: "Live", title: "直播", imageName: "btn_column_normal", selImageName: "btn_column_selected")
         addChildVc(storyboardName: "Profile", title: "我", imageName: "btn_user_normal", selImageName: "btn_user_selected")

@@ -18,6 +18,8 @@
 		D2C959581DA8F1030049E30F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C959571DA8F1030049E30F /* MainViewController.swift */; };
 		D2C9596E1DA9D4090049E30F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C9596D1DA9D4090049E30F /* Main.storyboard */; };
 		D2CA3FBF1DA9F05C00690C1C /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA3FBE1DA9F05C00690C1C /* Common.swift */; };
+		D2CA3FC11DA9F50800690C1C /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA3FC01DA9F50800690C1C /* PageTitleView.swift */; };
+		D2CA3FC41DAA4AF900690C1C /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA3FC31DAA4AF900690C1C /* UIColor-Extension.swift */; };
 		D2D68C6C1DA8E6670090CDA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2D68C6B1DA8E6670090CDA7 /* Assets.xcassets */; };
 		D2D68C6F1DA8E6670090CDA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2D68C6D1DA8E6670090CDA7 /* LaunchScreen.storyboard */; };
 		D2D68C801DA8EC420090CDA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D68C7F1DA8EC420090CDA7 /* AppDelegate.swift */; };
@@ -35,6 +37,8 @@
 		D2C959571DA8F1030049E30F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D2C9596D1DA9D4090049E30F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D2CA3FBE1DA9F05C00690C1C /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		D2CA3FC01DA9F50800690C1C /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
+		D2CA3FC31DAA4AF900690C1C /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		D2D68C611DA8E6670090CDA7 /* DYTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D68C6B1DA8E6670090CDA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2D68C6E1DA8E6670090CDA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,6 +76,7 @@
 		D2C959561DA8F0A50049E30F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D2CA3FC01DA9F50800690C1C /* PageTitleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -166,6 +171,14 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D2CA3FC21DAA4AC200690C1C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D2CA3FC31DAA4AF900690C1C /* UIColor-Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		D2D68C581DA8E6670090CDA7 = {
@@ -267,6 +280,7 @@
 		D2D68C7D1DA8EC0A0090CDA7 /* Tools(工具) */ = {
 			isa = PBXGroup;
 			children = (
+				D2CA3FC21DAA4AC200690C1C /* Extension */,
 				D2CA3FBE1DA9F05C00690C1C /* Common.swift */,
 			);
 			name = "Tools(工具)";
@@ -350,9 +364,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2CA3FC11DA9F50800690C1C /* PageTitleView.swift in Sources */,
 				D2460AED1DA9E718002D8866 /* ProfileViewController.swift in Sources */,
 				D2D68C801DA8EC420090CDA7 /* AppDelegate.swift in Sources */,
 				D2C959581DA8F1030049E30F /* MainViewController.swift in Sources */,
+				D2CA3FC41DAA4AF900690C1C /* UIColor-Extension.swift in Sources */,
 				D2460AE71DA9E1CF002D8866 /* HomeViewController.swift in Sources */,
 				D2460AE91DA9E704002D8866 /* FollowViewController.swift in Sources */,
 				D2460AEB1DA9E70E002D8866 /* LiveViewController.swift in Sources */,
