@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol PageTitleViewDelegate {
+protocol PageTitleViewDelegate:class {
     func pageTitleView(titleView: PageTitleView, selectIndex: Int)
 }
 
@@ -18,11 +18,11 @@ private let kSelectColor: (CGFloat, CGFloat, CGFloat) = (225, 128, 0)
 
 class PageTitleView: UIView {
     
-    // Mark:-属性
+    // MARK:-属性
     private var currentIndex: Int = 0
     private var titles: [String] = []
-    private var delegate: PageTitleViewDelegate?
-    // Mark:-懒加载属性
+    weak var delegate: PageTitleViewDelegate?
+    // MARK:-懒加载属性
     private lazy var titleLabels: [UILabel] = [UILabel]()
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -36,7 +36,6 @@ class PageTitleView: UIView {
         scrollLine.backgroundColor = UIColor.orange
         return scrollLine
     }()
-    
     init(frame: CGRect, titles: [String]) {
         self.titles = titles
         super.init(frame: frame)
@@ -47,7 +46,7 @@ class PageTitleView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // Mark:-设置UI界面
+    // MARK:==设置UI界面
     private func setupUI(){
         // 添加scrollView
         addSubview(scrollView)
@@ -124,6 +123,35 @@ class PageTitleView: UIView {
         firstLabel.textColor = UIColor(r: kSelectColor.0, g: kSelectColor.1, b: kSelectColor.2)
         scrollView.addSubview(scrollLine)
         scrollLine.frame = CGRect(x: firstLabel.frame.origin.x, y: frame.height - kScrollLineH, width: firstLabel.frame.width, height: kScrollLineH)
+    }
+    
+    // MARK:==对外暴露的方法
+    func setTitleWithProgress(progress: CGFloat, sourceIndex: Int, targetIndex: Int){
+        
+        
+        
+        let sourceLabel = titleLabels[sourceIndex]
+        let targetLabel = titleLabels[targetIndex]
+        
+        
+        
+        // 处理滑块逻辑
+        let moveTotalX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
+        let moveX = moveTotalX * progress
+        scrollLine.frame.origin.x = sourceLabel.frame.origin.x + moveX
+        
+        // 颜色渐变
+        let colorDelta = (kSelectColor.0 - kNormalColor.0, kSelectColor.1 - kNormalColor.1, kSelectColor.2 - kNormalColor.2)
+        
+        sourceLabel.textColor = UIColor(r: kSelectColor.0 - colorDelta.0 * progress, g: kSelectColor.1 - colorDelta.1 * progress, b: kSelectColor.2 - colorDelta.2 * progress)
+        
+        targetLabel.textColor = UIColor(r: kNormalColor.0 + colorDelta.0 * progress, g: kNormalColor.1 + colorDelta.1 * progress, b: kNormalColor.2 + colorDelta.2 * progress)
+        
+        if sourceIndex == targetIndex {
+            targetLabel.textColor = UIColor(r: kSelectColor.0, g: kSelectColor.1, b: kSelectColor.2)
+        }
+        
+        currentIndex = targetIndex
     }
 }
 
