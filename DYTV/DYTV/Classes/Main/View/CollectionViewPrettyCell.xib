@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wfQ-gU-cnx" customClass="CollectionViewPrettyCell" customModule="DYTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="237" height="231"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="237" height="231"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmN-pj-tWY">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="9jO-JP-8vF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="苏州市" image="ico_location">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="斗鱼TV直播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uN-m5-LQh">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="I7h-On-HZQ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_cell_default_phone" translatesAutoresizingMaskIntoConstraints="NO" id="8kP-ir-fIb"/>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="8kP-ir-fIb" firstAttribute="top" secondItem="wfQ-gU-cnx" secondAttribute="top" id="0Lb-MA-csC"/>
+                <constraint firstAttribute="trailing" secondItem="3uN-m5-LQh" secondAttribute="trailing" constant="5" id="0xs-au-t06"/>
+                <constraint firstItem="TmN-pj-tWY" firstAttribute="leading" secondItem="wfQ-gU-cnx" secondAttribute="leading" id="7Au-d4-XfO"/>
+                <constraint firstItem="3uN-m5-LQh" firstAttribute="top" secondItem="8kP-ir-fIb" secondAttribute="bottom" constant="5" id="AeQ-Sc-sDJ"/>
+                <constraint firstAttribute="trailing" secondItem="8kP-ir-fIb" secondAttribute="trailing" id="KDF-5P-Dug"/>
+                <constraint firstItem="3uN-m5-LQh" firstAttribute="leading" secondItem="wfQ-gU-cnx" secondAttribute="leading" id="KMn-Bj-Eop"/>
+                <constraint firstItem="TmN-pj-tWY" firstAttribute="top" secondItem="3uN-m5-LQh" secondAttribute="bottom" constant="5" id="MO3-Uj-v6E"/>
+                <constraint firstAttribute="bottom" secondItem="TmN-pj-tWY" secondAttribute="bottom" constant="14" id="fAz-PC-XVr"/>
+                <constraint firstItem="8kP-ir-fIb" firstAttribute="leading" secondItem="wfQ-gU-cnx" secondAttribute="leading" id="kFO-na-x8T"/>
+            </constraints>
+            <size key="customSize" width="237" height="231"/>
+            <connections>
+                <outlet property="iconImageView" destination="8kP-ir-fIb" id="ffd-mD-ZGH"/>
+                <outlet property="nickNameLabel" destination="3uN-m5-LQh" id="OA2-Bs-U1L"/>
+            </connections>
+            <point key="canvasLocation" x="4.5" y="115.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ico_location" width="12" height="12"/>
+        <image name="live_cell_default_phone" width="103" height="103"/>
+    </resources>
+</document>

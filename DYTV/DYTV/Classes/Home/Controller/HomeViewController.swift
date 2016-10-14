@@ -13,7 +13,7 @@ private let titleViewH : CGFloat = 40
 class HomeViewController: UIViewController, PageTitleViewDelegate, PageContentViewDelegate {
 
     
-    private lazy var pageTitleView: PageTitleView = {[weak self] in
+    fileprivate lazy var pageTitleView: PageTitleView = {[weak self] in
         let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: titleViewH)
         let titles = ["推荐", "游戏", "娱乐", "趣玩"]
         
@@ -22,7 +22,7 @@ class HomeViewController: UIViewController, PageTitleViewDelegate, PageContentVi
         return titleView
         }()
     
-    private lazy var pageContentView: PageContentView = {[weak self] in
+    fileprivate lazy var pageContentView: PageContentView = {[weak self] in
         let contentH = kScreenH - kNavigationBarH - kStatusBarH - kTabBarH - titleViewH
         let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH + titleViewH, width: kScreenW, height: contentH)
         
@@ -67,12 +67,12 @@ class HomeViewController: UIViewController, PageTitleViewDelegate, PageContentVi
     
     // MARK:- 代理方法
     /// PageTitleViewDelegate
-    func pageTitleView(titleView: PageTitleView, selectIndex: Int){
-        pageContentView.setCurrentIndex(currentIndex: selectIndex)
+    func pageTitleView(_ titleView: PageTitleView, selectIndex: Int){
+        pageContentView.setCurrentIndex(selectIndex)
     }
     /// PageContentViewDelegate
-    func pageContentView(contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int){
-        pageTitleView.setTitleWithProgress(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+    func pageContentView(_ contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int){
+        pageTitleView.setTitleWithProgress(progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
 }
 

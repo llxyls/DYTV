@@ -9,7 +9,7 @@
 import UIKit
 
 protocol PageTitleViewDelegate:class {
-    func pageTitleView(titleView: PageTitleView, selectIndex: Int)
+    func pageTitleView(_ titleView: PageTitleView, selectIndex: Int)
 }
 
 private let kScrollLineH: CGFloat = 2
@@ -19,19 +19,19 @@ private let kSelectColor: (CGFloat, CGFloat, CGFloat) = (225, 128, 0)
 class PageTitleView: UIView {
     
     // MARK:-属性
-    private var currentIndex: Int = 0
-    private var titles: [String] = []
+    fileprivate var currentIndex: Int = 0
+    fileprivate var titles: [String] = []
     weak var delegate: PageTitleViewDelegate?
     // MARK:-懒加载属性
-    private lazy var titleLabels: [UILabel] = [UILabel]()
-    private lazy var scrollView: UIScrollView = {
+    fileprivate lazy var titleLabels: [UILabel] = [UILabel]()
+    fileprivate lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.bounces = false
         return scrollView
     }()
-    private lazy var scrollLine: UIView = {
+    fileprivate lazy var scrollLine: UIView = {
         let scrollLine = UIView()
         scrollLine.backgroundColor = UIColor.orange
         return scrollLine
@@ -47,7 +47,7 @@ class PageTitleView: UIView {
     }
     
     // MARK:==设置UI界面
-    private func setupUI(){
+    fileprivate func setupUI(){
         // 添加scrollView
         addSubview(scrollView)
         scrollView.frame = bounds
@@ -57,7 +57,7 @@ class PageTitleView: UIView {
         setupBottomLineAndScrollLine()
     }
     /// 设置标题
-    private func setupTitleLabels(){
+    fileprivate func setupTitleLabels(){
         let labelW: CGFloat = frame.width / CGFloat(titles.count)
         let labelH: CGFloat = frame.height - kScrollLineH
         let labelY: CGFloat = 0
@@ -79,13 +79,13 @@ class PageTitleView: UIView {
             titleLabels.append(label)
             // 添加手势
             label.isUserInteractionEnabled = true
-            let tap = UITapGestureRecognizer(target: self, action: #selector(titleLabelClick(tapGes:)))
+            let tap = UITapGestureRecognizer(target: self, action: #selector(titleLabelClick(_:)))
             label.addGestureRecognizer(tap)
         }
     }
     
     // 标题点击
-    @objc private func titleLabelClick(tapGes: UITapGestureRecognizer){
+    @objc fileprivate func titleLabelClick(_ tapGes: UITapGestureRecognizer){
         // 是否手势触发
         guard let currentLabel = tapGes.view as? UILabel else {
             return
@@ -107,10 +107,10 @@ class PageTitleView: UIView {
             self.scrollLine.frame.origin.x = scrollLineX
         }
         // 通知代理
-        delegate?.pageTitleView(titleView: self, selectIndex: currentIndex)
+        delegate?.pageTitleView(self, selectIndex: currentIndex)
     }
     /// 设置底部滚动线和阴影
-    private func setupBottomLineAndScrollLine(){
+    fileprivate func setupBottomLineAndScrollLine(){
         // 阴影
         let bottomLine = UIView()
         bottomLine.backgroundColor = UIColor.lightGray
@@ -126,14 +126,10 @@ class PageTitleView: UIView {
     }
     
     // MARK:==对外暴露的方法
-    func setTitleWithProgress(progress: CGFloat, sourceIndex: Int, targetIndex: Int){
-        
-        
+    func setTitleWithProgress(_ progress: CGFloat, sourceIndex: Int, targetIndex: Int){
         
         let sourceLabel = titleLabels[sourceIndex]
         let targetLabel = titleLabels[targetIndex]
-        
-        
         
         // 处理滑块逻辑
         let moveTotalX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
@@ -154,8 +150,6 @@ class PageTitleView: UIView {
         currentIndex = targetIndex
     }
 }
-
-
 
 
 

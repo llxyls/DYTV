@@ -9,7 +9,7 @@
 import UIKit
 
 protocol PageContentViewDelegate: class {
-    func pageContentView(contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int)
+    func pageContentView(_ contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int)
 }
 
 private let ContentCellID = "ContentCellID"
@@ -17,11 +17,11 @@ private let ContentCellID = "ContentCellID"
 class PageContentView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
     
     weak var delegate: PageContentViewDelegate?
-    private var startOffsetX: CGFloat = 0
-    private var isForbidScrollDelegate: Bool = false
-    private var childVcs: [UIViewController] = [UIViewController]()
-    private weak var parentViewController: UIViewController?
-    private lazy var collectionView: UICollectionView = {[weak self] in
+    fileprivate var startOffsetX: CGFloat = 0
+    fileprivate var isForbidScrollDelegate: Bool = false
+    fileprivate var childVcs: [UIViewController] = [UIViewController]()
+    fileprivate weak var parentViewController: UIViewController?
+    fileprivate lazy var collectionView: UICollectionView = {[weak self] in
         // 创建FlowLayoutLayout
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = (self?.bounds.size)!
@@ -43,7 +43,6 @@ class PageContentView: UIView, UICollectionViewDelegate, UICollectionViewDataSou
         return collectionView
     }()
     
-    
     init(frame: CGRect, childVcs: [UIViewController], parentViewController: UIViewController?) {
         self.childVcs = childVcs
         self.parentViewController = parentViewController
@@ -57,7 +56,7 @@ class PageContentView: UIView, UICollectionViewDelegate, UICollectionViewDataSou
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupUI() {
+    fileprivate func setupUI() {
         for childVc in childVcs{
             parentViewController?.addChildViewController(childVc)
         }
@@ -67,7 +66,7 @@ class PageContentView: UIView, UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     // MARK:==对外暴露的方法
-    func setCurrentIndex(currentIndex: Int){
+    func setCurrentIndex(_ currentIndex: Int){
         // 不需要代理方法改变offset
         isForbidScrollDelegate = true
         
@@ -126,9 +125,6 @@ class PageContentView: UIView, UICollectionViewDelegate, UICollectionViewDataSou
             if targetIndex >= childVcs.count {
                 targetIndex = childVcs.count - 1
             }
-            print("startOffsetX = \(startOffsetX)")
-            print(currentOffsetX - startOffsetX)
-            print("scrollViewW = \(scrollViewW)")
             
             /*
             // 如果完全划过去
@@ -148,11 +144,14 @@ class PageContentView: UIView, UICollectionViewDelegate, UICollectionViewDataSou
                 sourceIndex = childVcs.count - 1
             }
             
+            if currentOffsetX <= 0 {
+                sourceIndex = 0
+            }
+            
         }
         
-        print("sourceIndex = \(sourceIndex), targetIndex = \(targetIndex)")
         
-        delegate?.pageContentView(contentView: self, progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+        delegate?.pageContentView(self, progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
     
 }
