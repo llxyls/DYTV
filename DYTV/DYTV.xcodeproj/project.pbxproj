@@ -33,6 +33,7 @@
 		D2DE108A1DAF447F006DF8D8 /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2DE10891DAF447F006DF8D8 /* CollectionNormalCell.xib */; };
 		D2DE108C1DAF44D1006DF8D8 /* CollectionViewPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DE108B1DAF44D1006DF8D8 /* CollectionViewPrettyCell.swift */; };
 		D2DE108E1DAF44E1006DF8D8 /* CollectionViewPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2DE108D1DAF44E1006DF8D8 /* CollectionViewPrettyCell.xib */; };
+		D2DE10901DB09F52006DF8D8 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DE108F1DB09F52006DF8D8 /* NSDate-Extension.swift */; };
 		D4F82BD1ACDD0A6B451C80E7 /* Pods_DYTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8983C300CAE39BD53E1978 /* Pods_DYTV.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		D2DE10891DAF447F006DF8D8 /* CollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
 		D2DE108B1DAF44D1006DF8D8 /* CollectionViewPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewPrettyCell.swift; sourceTree = "<group>"; };
 		D2DE108D1DAF44E1006DF8D8 /* CollectionViewPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewPrettyCell.xib; sourceTree = "<group>"; };
+		D2DE108F1DB09F52006DF8D8 /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 			children = (
 				D2CA3FC31DAA4AF900690C1C /* UIColor-Extension.swift */,
 				D2CA3FC51DAB2CC900690C1C /* UIBarButtonItem-Extension.swift */,
+				D2DE108F1DB09F52006DF8D8 /* NSDate-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				D2D0E72C1DACEF1E00E97C3D /* RecommendViewController.swift in Sources */,
 				D2C959581DA8F1030049E30F /* MainViewController.swift in Sources */,
 				D2CA3FC41DAA4AF900690C1C /* UIColor-Extension.swift in Sources */,
+				D2DE10901DB09F52006DF8D8 /* NSDate-Extension.swift in Sources */,
 				D2DE10881DAF4468006DF8D8 /* CollectionViewNormalCell.swift in Sources */,
 				D2460AE71DA9E1CF002D8866 /* HomeViewController.swift in Sources */,
 				D2460AE91DA9E704002D8866 /* FollowViewController.swift in Sources */,

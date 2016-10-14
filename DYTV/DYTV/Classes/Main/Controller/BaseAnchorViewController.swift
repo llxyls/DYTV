@@ -42,20 +42,30 @@ class BaseAnchorViewController: UIViewController, UICollectionViewDataSource, UI
         super.viewDidLoad()
 
         setupUI()
+        
+        loadData()
     }
     
     private func setupUI(){
-//        view.addSubview(<#T##view: UIView##UIView#>)
+        view.addSubview(collectionView)
+    }
+    
+    func loadData(){
+        
     }
     
     // MARK:==UICollectionViewDataSource
+    func numberOfSections(in collectionView: UICollectionView) -> Int{
+        return 10
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return 1;
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         let cell = UICollectionViewCell()
         
-        return cell;
+        return cell
     }
 }

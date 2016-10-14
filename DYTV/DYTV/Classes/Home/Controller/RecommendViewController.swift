@@ -13,8 +13,11 @@ class RecommendViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
         
+       NetworkTools.requestData(type: .get, URLString: "http://capi.douyucdn.cn/api/v1/getbigDataRoom", parameter: ["time" : NSDate.getCurrentTime()]) { (result) in
+        print(result)
+        
+        }
     }
 
     override func didReceiveMemoryWarning() {
