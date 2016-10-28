@@ -15,6 +15,10 @@
 		D2460AE91DA9E704002D8866 /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2460AE81DA9E704002D8866 /* FollowViewController.swift */; };
 		D2460AEB1DA9E70E002D8866 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2460AEA1DA9E70E002D8866 /* LiveViewController.swift */; };
 		D2460AED1DA9E718002D8866 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2460AEC1DA9E718002D8866 /* ProfileViewController.swift */; };
+		D289BF4B1DC306E400B47B8A /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289BF4A1DC306E400B47B8A /* BaseViewModel.swift */; };
+		D289BF4D1DC3090700B47B8A /* BaseGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289BF4C1DC3090700B47B8A /* BaseGameModel.swift */; };
+		D289BF4F1DC30E5800B47B8A /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289BF4E1DC30E5800B47B8A /* AnchorGroup.swift */; };
+		D289BF511DC3113E00B47B8A /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289BF501DC3113E00B47B8A /* AnchorModel.swift */; };
 		D2C959581DA8F1030049E30F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C959571DA8F1030049E30F /* MainViewController.swift */; };
 		D2C9596E1DA9D4090049E30F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C9596D1DA9D4090049E30F /* Main.storyboard */; };
 		D2CA3FBF1DA9F05C00690C1C /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA3FBE1DA9F05C00690C1C /* Common.swift */; };
@@ -49,6 +53,10 @@
 		D2460AE81DA9E704002D8866 /* FollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
 		D2460AEA1DA9E70E002D8866 /* LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		D2460AEC1DA9E718002D8866 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D289BF4A1DC306E400B47B8A /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		D289BF4C1DC3090700B47B8A /* BaseGameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseGameModel.swift; sourceTree = "<group>"; };
+		D289BF4E1DC30E5800B47B8A /* AnchorGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
+		D289BF501DC3113E00B47B8A /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
 		D2C959571DA8F1030049E30F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D2C9596D1DA9D4090049E30F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D2CA3FBE1DA9F05C00690C1C /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -101,6 +109,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D289BF491DC306A000B47B8A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D289BF4A1DC306E400B47B8A /* BaseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		D2C959541DA8F0A50049E30F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +130,9 @@
 		D2C959551DA8F0A50049E30F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D289BF4C1DC3090700B47B8A /* BaseGameModel.swift */,
+				D289BF4E1DC30E5800B47B8A /* AnchorGroup.swift */,
+				D289BF501DC3113E00B47B8A /* AnchorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -314,6 +333,7 @@
 		D2D68C7B1DA8EC0A0090CDA7 /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				D289BF491DC306A000B47B8A /* ViewModel */,
 				D2C959541DA8F0A50049E30F /* Controller */,
 				D2C959551DA8F0A50049E30F /* Model */,
 				D2C959561DA8F0A50049E30F /* View */,
@@ -478,7 +498,10 @@
 				D2DE10861DAF4438006DF8D8 /* CollectionViewBaseCell.swift in Sources */,
 				D2CA3FC61DAB2CC900690C1C /* UIBarButtonItem-Extension.swift in Sources */,
 				D2CA3FC11DA9F50800690C1C /* PageTitleView.swift in Sources */,
+				D289BF4F1DC30E5800B47B8A /* AnchorGroup.swift in Sources */,
+				D289BF511DC3113E00B47B8A /* AnchorModel.swift in Sources */,
 				D2DE10841DAF364D006DF8D8 /* BaseAnchorViewController.swift in Sources */,
+				D289BF4D1DC3090700B47B8A /* BaseGameModel.swift in Sources */,
 				D2CA3FC81DAB3EB800690C1C /* PageContentView.swift in Sources */,
 				D2460AED1DA9E718002D8866 /* ProfileViewController.swift in Sources */,
 				D2D68C801DA8EC420090CDA7 /* AppDelegate.swift in Sources */,
@@ -489,6 +512,7 @@
 				D2DE10881DAF4468006DF8D8 /* CollectionViewNormalCell.swift in Sources */,
 				D2460AE71DA9E1CF002D8866 /* HomeViewController.swift in Sources */,
 				D2460AE91DA9E704002D8866 /* FollowViewController.swift in Sources */,
+				D289BF4B1DC306E400B47B8A /* BaseViewModel.swift in Sources */,
 				D2460AEB1DA9E70E002D8866 /* LiveViewController.swift in Sources */,
 				D2DE108C1DAF44D1006DF8D8 /* CollectionViewPrettyCell.swift in Sources */,
 				D2D0E72E1DAE1F1E00E97C3D /* NetworkTools.swift in Sources */,

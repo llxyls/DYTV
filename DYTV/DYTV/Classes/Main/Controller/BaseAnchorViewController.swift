@@ -14,6 +14,8 @@ private let kHeaderViewH : CGFloat = 50
 private let kNormalItemW = (kScreenW - 3 * kItemMargin) / 2
 private let kNormalItemH = kNormalItemW * 3 / 4
 
+private let kNormalCellID = "kNormalCellID"
+private let kPrettyCellID = "kPrettyCellID"
 
 class BaseAnchorViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
@@ -35,7 +37,6 @@ class BaseAnchorViewController: UIViewController, UICollectionViewDataSource, UI
         collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         
         return collectionView
-        
     }()
     
     override func viewDidLoad() {
