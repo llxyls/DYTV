@@ -35,6 +35,7 @@ class PageContentView: UIView, UICollectionViewDelegate, UICollectionViewDataSou
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
         collectionView.isPagingEnabled = true
+        collectionView.bounces = false
         collectionView.scrollsToTop = false
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -117,7 +118,7 @@ class PageContentView: UIView, UICollectionViewDelegate, UICollectionViewDataSou
         // 判断左划还是右划
         if currentOffsetX > startOffsetX { // 左划
             // 计算progress
-            progress = currentOffsetX / scrollViewW - CGFloat(Int(CGFloat(currentOffsetX) / CGFloat(scrollViewW)))
+            progress = currentOffsetX / scrollViewW - floor(currentOffsetX / scrollViewW)
             // 计算sourceIndex
             sourceIndex = Int(currentOffsetX / scrollViewW)
             // 计算targetIndex
@@ -126,16 +127,14 @@ class PageContentView: UIView, UICollectionViewDelegate, UICollectionViewDataSou
                 targetIndex = childVcs.count - 1
             }
             
-            /*
             // 如果完全划过去
             if (currentOffsetX - startOffsetX) == scrollViewW{
                 progress = 1
-                sourceIndex = targetIndex
+                targetIndex = sourceIndex;
             }
- */
-            
+ 
         } else { // 右划
-            progress = 1 - (currentOffsetX / scrollViewW - CGFloat(Int(CGFloat(currentOffsetX) / CGFloat(scrollViewW))))
+            progress = 1 - (currentOffsetX / scrollViewW - floor(currentOffsetX / scrollViewW))
             
             targetIndex = Int(currentOffsetX / scrollViewW)
             
@@ -143,13 +142,7 @@ class PageContentView: UIView, UICollectionViewDelegate, UICollectionViewDataSou
             if sourceIndex >= childVcs.count {
                 sourceIndex = childVcs.count - 1
             }
-            
-            if currentOffsetX <= 0 {
-                sourceIndex = 0
-            }
-            
         }
-        
         
         delegate?.pageContentView(self, progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }

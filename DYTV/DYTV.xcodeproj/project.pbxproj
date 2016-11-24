@@ -38,6 +38,8 @@
 		D2DE108C1DAF44D1006DF8D8 /* CollectionViewPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DE108B1DAF44D1006DF8D8 /* CollectionViewPrettyCell.swift */; };
 		D2DE108E1DAF44E1006DF8D8 /* CollectionViewPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2DE108D1DAF44E1006DF8D8 /* CollectionViewPrettyCell.xib */; };
 		D2DE10901DB09F52006DF8D8 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DE108F1DB09F52006DF8D8 /* NSDate-Extension.swift */; };
+		D2F4C8201DE4339600E70493 /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F4C81F1DE4339600E70493 /* RecommendViewModel.swift */; };
+		D2F4C8281DE6D16F00E70493 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F4C8271DE6D16F00E70493 /* BaseViewController.swift */; };
 		D4F82BD1ACDD0A6B451C80E7 /* Pods_DYTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8983C300CAE39BD53E1978 /* Pods_DYTV.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,8 @@
 		D2DE108B1DAF44D1006DF8D8 /* CollectionViewPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewPrettyCell.swift; sourceTree = "<group>"; };
 		D2DE108D1DAF44E1006DF8D8 /* CollectionViewPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewPrettyCell.xib; sourceTree = "<group>"; };
 		D2DE108F1DB09F52006DF8D8 /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
+		D2F4C81F1DE4339600E70493 /* RecommendViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
+		D2F4C8271DE6D16F00E70493 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 			children = (
 				D2C959571DA8F1030049E30F /* MainViewController.swift */,
 				D2C9596D1DA9D4090049E30F /* Main.storyboard */,
+				D2F4C8271DE6D16F00E70493 /* BaseViewController.swift */,
 				D2DE10831DAF364D006DF8D8 /* BaseAnchorViewController.swift */,
 			);
 			path = Controller;
@@ -311,6 +316,7 @@
 		D2D68C791DA8EC0A0090CDA7 /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
+				D2F4C81E1DE4334600E70493 /* ViewModel */,
 				D2C959591DA8F1820049E30F /* Controller */,
 				D2C9595A1DA8F1820049E30F /* Model */,
 				D2C9595B1DA8F1820049E30F /* View */,
@@ -362,6 +368,14 @@
 			);
 			name = "Tools(工具)";
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		D2F4C81E1DE4334600E70493 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D2F4C81F1DE4339600E70493 /* RecommendViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -500,6 +514,7 @@
 				D2CA3FC11DA9F50800690C1C /* PageTitleView.swift in Sources */,
 				D289BF4F1DC30E5800B47B8A /* AnchorGroup.swift in Sources */,
 				D289BF511DC3113E00B47B8A /* AnchorModel.swift in Sources */,
+				D2F4C8281DE6D16F00E70493 /* BaseViewController.swift in Sources */,
 				D2DE10841DAF364D006DF8D8 /* BaseAnchorViewController.swift in Sources */,
 				D289BF4D1DC3090700B47B8A /* BaseGameModel.swift in Sources */,
 				D2CA3FC81DAB3EB800690C1C /* PageContentView.swift in Sources */,
@@ -507,6 +522,7 @@
 				D2D68C801DA8EC420090CDA7 /* AppDelegate.swift in Sources */,
 				D2D0E72C1DACEF1E00E97C3D /* RecommendViewController.swift in Sources */,
 				D2C959581DA8F1030049E30F /* MainViewController.swift in Sources */,
+				D2F4C8201DE4339600E70493 /* RecommendViewModel.swift in Sources */,
 				D2CA3FC41DAA4AF900690C1C /* UIColor-Extension.swift in Sources */,
 				D2DE10901DB09F52006DF8D8 /* NSDate-Extension.swift in Sources */,
 				D2DE10881DAF4468006DF8D8 /* CollectionViewNormalCell.swift in Sources */,

@@ -13,6 +13,9 @@ class BaseGameModel: NSObject {
     var tag_name: String = ""
     var icon_url: String = ""
     
+    override init() {
+    }
+    
     // MARK: - 自定义构造函数
     init(dict: [String : Any]) {
         super.init()

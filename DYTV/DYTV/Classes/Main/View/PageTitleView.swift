@@ -86,14 +86,17 @@ class PageTitleView: UIView {
     
     // 标题点击
     @objc fileprivate func titleLabelClick(_ tapGes: UITapGestureRecognizer){
-        // 是否手势触发
+        // 获取被点击的Label
         guard let currentLabel = tapGes.view as? UILabel else {
             return
         }
-        // 是否当前Label
+        // 是否当前Label, 如果是直接返回
         if currentLabel.tag == currentIndex {
             return
         }
+        
+        
+        
         // 之前的label
         let oldLabel = titleLabels[currentIndex]
         // 改变状态
@@ -142,10 +145,6 @@ class PageTitleView: UIView {
         sourceLabel.textColor = UIColor(r: kSelectColor.0 - colorDelta.0 * progress, g: kSelectColor.1 - colorDelta.1 * progress, b: kSelectColor.2 - colorDelta.2 * progress)
         
         targetLabel.textColor = UIColor(r: kNormalColor.0 + colorDelta.0 * progress, g: kNormalColor.1 + colorDelta.1 * progress, b: kNormalColor.2 + colorDelta.2 * progress)
-        
-        if sourceIndex == targetIndex {
-            targetLabel.textColor = UIColor(r: kSelectColor.0, g: kSelectColor.1, b: kSelectColor.2)
-        }
         
         currentIndex = targetIndex
     }

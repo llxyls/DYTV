@@ -17,7 +17,7 @@ private let kNormalItemH = kNormalItemW * 3 / 4
 private let kNormalCellID = "kNormalCellID"
 private let kPrettyCellID = "kPrettyCellID"
 
-class BaseAnchorViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class BaseAnchorViewController: BaseViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     
     private lazy var collectionView: UICollectionView = {[unowned self] in
@@ -47,8 +47,11 @@ class BaseAnchorViewController: UIViewController, UICollectionViewDataSource, UI
         loadData()
     }
     
-    private func setupUI(){
+    override func setupUI(){
+        contentView = collectionView
         view.addSubview(collectionView)
+        // 调用父类的方法
+        super.setupUI()
     }
     
     func loadData(){
@@ -57,11 +60,11 @@ class BaseAnchorViewController: UIViewController, UICollectionViewDataSource, UI
     
     // MARK:==UICollectionViewDataSource
     func numberOfSections(in collectionView: UICollectionView) -> Int{
-        return 10
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return 1
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
