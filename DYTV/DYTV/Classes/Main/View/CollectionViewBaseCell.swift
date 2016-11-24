@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CollectionViewBaseCell: UICollectionViewCell {
     
@@ -29,7 +30,7 @@ class CollectionViewBaseCell: UICollectionViewCell {
             nickNameLabel.text = anchor.nickname
             // 图片
             guard  let iconURL = URL(string: anchor.vertical_src) else {return}
-//            iconImageView.kf.setImage(with: iconURL)
+            iconImageView.kf.setImage(with: iconURL)
         }
     }
 }
