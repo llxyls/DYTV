@@ -8,10 +8,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fCk-kU-dz1" customClass="CollectionViewNormalCell" customModule="DYTV" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="273" height="236"/>
+            <rect key="frame" x="0.0" y="0.0" width="303" height="236"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="273" height="236"/>
+                <rect key="frame" x="0.0" y="0.0" width="303" height="236"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_live_cate_normal" translatesAutoresizingMaskIntoConstraints="NO" id="apE-Zd-aJs">
@@ -61,13 +61,13 @@
                 <constraint firstItem="Oj2-0U-RrN" firstAttribute="trailing" secondItem="NQm-Qm-mBJ" secondAttribute="trailing" constant="-5" id="qg2-at-zXO"/>
                 <constraint firstItem="NQm-Qm-mBJ" firstAttribute="top" secondItem="fCk-kU-dz1" secondAttribute="top" id="xsf-sn-hOF"/>
             </constraints>
-            <size key="customSize" width="273" height="236"/>
+            <size key="customSize" width="303" height="236"/>
             <connections>
                 <outlet property="iconImageView" destination="NQm-Qm-mBJ" id="VkT-3q-ozD"/>
                 <outlet property="nickNameLabel" destination="fQ2-SJ-zhD" id="o5F-TA-ISl"/>
                 <outlet property="onlineBtn" destination="Oj2-0U-RrN" id="pic-LJ-Wkq"/>
             </connections>
-            <point key="canvasLocation" x="58" y="10"/>
+            <point key="canvasLocation" x="72.5" y="10"/>
         </collectionViewCell>
     </objects>
     <resources>

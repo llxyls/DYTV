@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 private let kCycleCellID = "kCycleCellID"
 
 class RecommendCycleView: UIView {

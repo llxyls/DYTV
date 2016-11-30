@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class RecommendViewModel: BaseViewModel {
     lazy var cycleModels: [CycleModel] = [CycleModel]()
     // 热门

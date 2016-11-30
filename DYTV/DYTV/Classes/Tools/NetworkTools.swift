@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 
+
 enum MethodType{
     case get
     case post

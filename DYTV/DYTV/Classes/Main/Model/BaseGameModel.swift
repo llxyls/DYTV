@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class BaseGameModel: NSObject {
     // MARK: - 属性
     var tag_name: String = ""

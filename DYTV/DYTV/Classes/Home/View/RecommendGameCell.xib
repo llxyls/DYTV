@@ -8,10 +8,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RecommendGameCell" customModule="DYTV" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
+            <rect key="frame" x="0.0" y="0.0" width="80" height="95"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
+                <rect key="frame" x="0.0" y="0.0" width="80" height="95"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zdf-li-9Mb">
@@ -39,12 +39,12 @@
                 <constraint firstItem="zdf-li-9Mb" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-8" id="e84-kU-qeB"/>
                 <constraint firstItem="ZBV-Nx-0Ba" firstAttribute="centerX" secondItem="zdf-li-9Mb" secondAttribute="centerX" id="yzG-dl-KJF"/>
             </constraints>
-            <size key="customSize" width="69" height="87"/>
+            <size key="customSize" width="69" height="92"/>
             <connections>
                 <outlet property="iconImageView" destination="zdf-li-9Mb" id="e8b-sS-hgH"/>
                 <outlet property="titleLabel" destination="ZBV-Nx-0Ba" id="776-u9-KdF"/>
             </connections>
-            <point key="canvasLocation" x="66.5" y="115.5"/>
+            <point key="canvasLocation" x="66" y="117.5"/>
         </collectionViewCell>
     </objects>
 </document>

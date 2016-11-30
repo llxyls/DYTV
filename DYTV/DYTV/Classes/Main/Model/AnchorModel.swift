@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class AnchorModel: NSObject {
     // MARK: - 属性
     /// 房间ID

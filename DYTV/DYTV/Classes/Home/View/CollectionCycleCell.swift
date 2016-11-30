@@ -9,6 +9,7 @@
 import UIKit
 import Kingfisher
 
+
 class CollectionCycleCell: UICollectionViewCell {
     
     

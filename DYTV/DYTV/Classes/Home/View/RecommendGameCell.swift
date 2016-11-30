@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class RecommendGameCell: UICollectionViewCell {
     
     @IBOutlet weak var iconImageView: UIImageView!

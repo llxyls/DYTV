@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class AnchorGroup: BaseGameModel {
     /// 定义主播的模型对象数组
     lazy var anchors: [AnchorModel] = [AnchorModel]()

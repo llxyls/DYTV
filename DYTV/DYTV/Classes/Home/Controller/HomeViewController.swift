@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 private let titleViewH : CGFloat = 40
 
 class HomeViewController: UIViewController, PageTitleViewDelegate, PageContentViewDelegate {

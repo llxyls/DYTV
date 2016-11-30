@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class CycleModel: NSObject {
     
     // 标题

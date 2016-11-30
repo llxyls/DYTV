@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 protocol PageTitleViewDelegate:class {
     func pageTitleView(_ titleView: PageTitleView, selectIndex: Int)
 }

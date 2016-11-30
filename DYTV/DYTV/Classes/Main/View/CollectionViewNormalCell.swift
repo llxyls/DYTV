@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class CollectionViewNormalCell: CollectionViewBaseCell {
     
 }

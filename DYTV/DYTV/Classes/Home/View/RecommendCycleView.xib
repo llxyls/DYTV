@@ -8,7 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RecommendCycleView" customModule="DYTV" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="351" height="133"/>
+            <rect key="frame" x="0.0" y="0.0" width="355" height="133"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="TxZ-a5-EIS">
@@ -44,7 +44,7 @@
                 <outlet property="collectionView" destination="TxZ-a5-EIS" id="52i-ff-afe"/>
                 <outlet property="pageControl" destination="LWm-SN-jd1" id="TmU-iv-zHR"/>
             </connections>
-            <point key="canvasLocation" x="44.5" y="-213.5"/>
+            <point key="canvasLocation" x="46.5" y="-213.5"/>
         </view>
     </objects>
 </document>

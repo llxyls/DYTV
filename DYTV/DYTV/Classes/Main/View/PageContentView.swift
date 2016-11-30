@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 protocol PageContentViewDelegate: class {
     func pageContentView(_ contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int)
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 private let kCycleViewH = kScreenW * 3 / 8
 private let kGameViewH: CGFloat = 90
 
