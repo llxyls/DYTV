@@ -21,12 +21,12 @@ class NetworkTools {
         
         Alamofire.request(URLString, method: method, parameters: parameter).responseJSON { (response) in
             
-            guard response.result.value != nil else {
+            guard let result = response.result.value else {
                 print(response.result.value)
                 return
             }
             
-            finishcallback(response)
+            finishcallback(result)
         }
         
         

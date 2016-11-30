@@ -31,17 +31,35 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_cell_default_phone" translatesAutoresizingMaskIntoConstraints="NO" id="8kP-ir-fIb"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_cell_default_phone" translatesAutoresizingMaskIntoConstraints="NO" id="8kP-ir-fIb">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfd-NL-CIM">
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.56535560344827585" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="5xr-g9-Ktc"/>
+                            <constraint firstAttribute="width" constant="60" id="GPc-oJ-sZs"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="6666在线"/>
+                    </button>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="8kP-ir-fIb" firstAttribute="top" secondItem="wfQ-gU-cnx" secondAttribute="top" id="0Lb-MA-csC"/>
                 <constraint firstAttribute="trailing" secondItem="3uN-m5-LQh" secondAttribute="trailing" constant="5" id="0xs-au-t06"/>
+                <constraint firstAttribute="trailing" secondItem="Wfd-NL-CIM" secondAttribute="trailing" constant="8" id="2fr-oh-5Cb"/>
                 <constraint firstItem="TmN-pj-tWY" firstAttribute="leading" secondItem="wfQ-gU-cnx" secondAttribute="leading" id="7Au-d4-XfO"/>
                 <constraint firstItem="3uN-m5-LQh" firstAttribute="top" secondItem="8kP-ir-fIb" secondAttribute="bottom" constant="5" id="AeQ-Sc-sDJ"/>
                 <constraint firstAttribute="trailing" secondItem="8kP-ir-fIb" secondAttribute="trailing" id="KDF-5P-Dug"/>
                 <constraint firstItem="3uN-m5-LQh" firstAttribute="leading" secondItem="wfQ-gU-cnx" secondAttribute="leading" id="KMn-Bj-Eop"/>
                 <constraint firstItem="TmN-pj-tWY" firstAttribute="top" secondItem="3uN-m5-LQh" secondAttribute="bottom" constant="5" id="MO3-Uj-v6E"/>
+                <constraint firstItem="Wfd-NL-CIM" firstAttribute="top" secondItem="wfQ-gU-cnx" secondAttribute="top" constant="8" id="S9f-RM-0hn"/>
                 <constraint firstAttribute="bottom" secondItem="TmN-pj-tWY" secondAttribute="bottom" constant="14" id="fAz-PC-XVr"/>
                 <constraint firstItem="8kP-ir-fIb" firstAttribute="leading" secondItem="wfQ-gU-cnx" secondAttribute="leading" id="kFO-na-x8T"/>
             </constraints>
@@ -49,6 +67,7 @@
             <connections>
                 <outlet property="iconImageView" destination="8kP-ir-fIb" id="ffd-mD-ZGH"/>
                 <outlet property="nickNameLabel" destination="3uN-m5-LQh" id="OA2-Bs-U1L"/>
+                <outlet property="onlineBtn" destination="Wfd-NL-CIM" id="bFC-1g-3iV"/>
             </connections>
             <point key="canvasLocation" x="4.5" y="115.5"/>
         </collectionViewCell>

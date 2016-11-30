@@ -24,6 +24,7 @@ class CollectionViewBaseCell: UICollectionViewCell {
             } else {
                 onlineStr = "\(anchor.online)在线"
             }
+            
             // 在线人数
             onlineBtn.setTitle(onlineStr, for: .normal)
             // 昵称的显示
