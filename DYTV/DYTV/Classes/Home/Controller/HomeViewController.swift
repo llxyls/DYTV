@@ -41,7 +41,6 @@ class HomeViewController: UIViewController, PageTitleViewDelegate, PageContentVi
         return pageContentView
     }()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // 不需要调整UIScrollView的内边距
@@ -54,7 +53,7 @@ class HomeViewController: UIViewController, PageTitleViewDelegate, PageContentVi
         view.addSubview(pageContentView)
     }
     
-    // navigationBar
+    /// navigationBar
     func setupNavigationBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "logo")
         
